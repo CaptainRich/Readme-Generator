@@ -9,7 +9,7 @@
 const generateTitle = (data) => {
 
   return `
-    ## ${data.title}
+## ${data.title}
 
     ${data.name}
 
@@ -21,7 +21,7 @@ const generateTitle = (data) => {
 const generateDescription = (data) => {
 
   return `
-    ## Description
+## Description
     
     ${data.description}
   `;
@@ -33,13 +33,13 @@ const generateDescription = (data) => {
 const generateTOC = (data) => {
 
   return `
-    ## Table of Contents
-    * [Installation Instructions](#installation-instructions)
-    * [Usage Instructions](#usage-instructions)
-    * [Contribution Guidelines](#contribution-guidelines)
-    * [Testing Instructions](#testing-instructions)
-    * [Licenses Used](#licenses-used)
-    * [Application Questions](#application-questions)
+## Table of Contents
+* [Installation Instructions](#installation-instructions)
+* [Usage Instructions](#usage-instructions)
+* [Contribution Guidelines](#contribution-guidelines)
+* [Testing Instructions](#testing-instructions)
+* [Licenses Used](#licenses-used)
+* [Application Questions](#application-questions)
     
   `;
 };
@@ -49,7 +49,7 @@ const generateTOC = (data) => {
 const generateInstructions = (data) => {
 
   return `
-    ## Installation Instructions
+## Installation Instructions
     
     ${data.instruct}
   `;
@@ -61,7 +61,7 @@ const generateInstructions = (data) => {
 const generateUsage = (data) => {
 
   return `
-    ## Usage Instructions
+## Usage Instructions
     
     ${data.usage}
   `;
@@ -74,7 +74,7 @@ const generateUsage = (data) => {
 const generateContributions = (data) => {
 
   return `
-    ## Contribution Guidelines
+## Contribution Guidelines
     
     ${data.contributions}
   `;
@@ -84,12 +84,12 @@ const generateContributions = (data) => {
 
 // Create the "testing instructions" section
 
-const generateTestDetails = testDetails => {
+const generateTestDetails = (data) => {
 
   return `
-    ## Testing Instructions
+## Testing Instructions
     
-    ${testDetails}
+    ${data.testDetails}
   `;
 };
 
@@ -97,27 +97,27 @@ const generateTestDetails = testDetails => {
 
 // Create the "licensing" section
 
-const generateLicensing = licenseDetails => {
+const generateLicensing = (data) => {
 
   return `
-    ## Licenses Used
+## Licenses Used
     
-    ${licenseDetails}
+    ${data.licenseDetails}
   `;
 };
 
 // Create the "questions" section
 
-const generateQuestions = (questions, email, gitHub) => {
+const generateQuestions = (data) => {
 
   return `
-    ## Application Questions
+## Application Questions
     
-    $(questions)
+    ${data.questions}
 
-    The following link will present my GitHub profile: $(gitHub)
+    The following link will present my GitHub profile: ${data.gitHub}
     For those that would prefer direct correspondence, my email address is:
-    ${email}
+    ${data.email}
   `;
 };
 

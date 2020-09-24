@@ -23,7 +23,7 @@ const getInfo = () => {
         },
         {
             type: 'input',
-            name: 'github',
+            name: 'gitHub',
             message: 'Enter your GitHub Username (Required):',
             validate: nameInput => {
                 if (nameInput) {
@@ -95,6 +95,19 @@ const getInfo = () => {
                     return true;
                 } else {
                     console.log("Please define contribution details!");
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'testDetails',
+            message: 'Specify testing details for this project (Required):',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log("Please define testing details!");
                     return false;
                 }
             }
