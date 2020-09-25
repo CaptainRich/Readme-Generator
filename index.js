@@ -129,7 +129,7 @@ const getInfo = () => {
             type: 'checkbox',
             name: 'licenses',
             message: 'What licenses have been used by this application?',
-            choices: ['MIT', 'iBM', 'ISC', 'Zlib', 'Mozilla']
+            choices: [' MIT', ' IBM', ' ISC', ' Zlib', ' Mozilla']
         },
     ])
         .then(function (data) {

@@ -29,19 +29,19 @@ const generateBadges = (data) => {
   // Loop over the licenses selected, building the output array
   var licenseText = [];
   for( var i = 0; i < data.licenses.length; i++ ) {
-    if( data.licenses[i] == 'MIT' ) {
+    if( data.licenses[i] == ' MIT' ) {
       licenseText.push( licenseBadges[0] );
     };
-    if( data.licenses[i] == 'IBM' ) {
+    if( data.licenses[i] == ' IBM' ) {
       licenseText.push( licenseBadges[1] );
     };
-    if( data.licenses[i] == 'ISC' ) {
+    if( data.licenses[i] == ' ISC' ) {
       licenseText.push( licenseBadges[2] );
     };
-    if( data.licenses[i] == 'Zlib' ) {
+    if( data.licenses[i] == ' Zlib' ) {
       licenseText.push( licenseBadges[3] );
     };
-    if( data.licenses[i] == 'Mozilla' ) {
+    if( data.licenses[i] == ' Mozilla' ) {
       licenseText.push( licenseBadges[4] );
     };
   };
@@ -138,15 +138,18 @@ const generateLicensing = (data) => {
 
   // Loop over the licenses selected, building the output array
   var licenseText = [];
-  licenseText.push( 'Licenses used: ');
+  licenseText.push( 'Licenses used');
   for( var i = 0; i < data.licenses.length; i++ ) {
-    licenseText.push( data.licenses[i] + ', ' );
+    licenseText.push( data.licenses[i] );
   };
+
+  const displayLicenses = licenseText.join();
+  console.log( displayLicenses );
 
   return `
 ## Licenses Used
 
-    ${licenseText}
+    ${displayLicenses}
   `;
 };
 
@@ -157,8 +160,8 @@ const generateQuestions = (data) => {
   return `
 ## Application Questions
   
-    The following link will present my GitHub profile: (https://github.com/${data.gitHub})
-    For those that would prefer direct correspondence, my email address is: (${data.email})
+    The following link will present my GitHub profile: [Profile](https://github.com/${data.gitHub})
+    For those that would prefer direct correspondence, my email address is: [email](${data.email})
   `;
 };
 
