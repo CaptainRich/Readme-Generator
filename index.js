@@ -36,6 +36,19 @@ const getInfo = () => {
         },
         {
             type: 'input',
+            name: 'email',
+            message: 'Enter your email address (Required):',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log("Please enter your email address!");
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
             name: 'title',
             message: 'Enter the title of this project (Required):',
             validate: nameInput => {
@@ -118,18 +131,6 @@ const getInfo = () => {
             message: 'What licenses have been used by this application?',
             choices: ['MIT', 'iBM', 'ISC', 'Zlib', 'Mozilla']
         },
-        {
-            type: 'confirm',
-            name: 'confirmAbout',
-            message: 'Would you like to enter some information about yourself for an "About" section?',
-            default: true
-        },
-        {
-            type: 'input',
-            name: 'about',
-            message: 'Provide some information about yourself:',
-            when: ({ confirmAbout }) => confirmAbout
-        }
     ])
         .then(function (data) {
 

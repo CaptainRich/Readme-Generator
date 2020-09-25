@@ -1,14 +1,18 @@
 
     
-    ## dfd
+## ReadMe Markdown Generator
 
-    Rich
+    Richard Ay, September 2020
 
   
     
-    ## Description
+    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT),[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC);
+
+  
     
-    dfjf
+## Description
+    
+    This project prompts the user with a list of questions and builds a 'ReadMe.md' file based on the responses.
   
     
 ## Table of Contents
@@ -21,37 +25,34 @@
     
   
     
-    ## Installation Instructions
+## Installation Instructions
     
-    adkfj
+    Make sure 'node.js' is installed on your computer. 
   
     
-    ## Usage Instructions
+## Usage Instructions
     
-    a;dkfj
+    From the GitHub repository, navigate to the /dist subdirectory and issue the command: 'node index'.
   
     
-    ## Contribution Guidelines
+## Contribution Guidelines
     
-    ad;klfj
+    Additional contributions to this project can be made be creating additional 'develop' branches.
   
     
-    ## Testing Instructions
+## Testing Instructions
     
-    [object Object]
+    Test steps should include: completely answering the questions, trying to skip questions, and viewing the output file.
   
     
-    ## Licenses Used
-    
-    [object Object]
-  
-    
-    ## Application Questions
-    
-    $(questions)
+## Licenses Used
 
-    The following link will present my GitHub profile: $(gitHub)
-    For those that would prefer direct correspondence, my email address is:
-    undefined
+    Licenses used: ,MIT, ,ISC, 
+  
+    
+## Application Questions
+  
+    The following link will present my GitHub profile: (https://github.com/CaptainRich)
+    For those that would prefer direct correspondence, my email address is: (rich.ay3896@gmail.com)
   
   
