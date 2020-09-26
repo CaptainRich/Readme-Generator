@@ -1,10 +1,10 @@
 
 const licenseBadges = [
-   "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)", 
-   "[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)",
-   "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)", 
-   "[![License: Zlib](https://img.shields.io/badge/License-Zlib-lightgrey.svg)](https://opensource.org/licenses/Zlib)",
-   "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)"    /*MIT, IBM, ISC, Zlib, Mozilla*/
+"[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)", 
+"[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)",
+"[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)", 
+"[![License: Zlib](https://img.shields.io/badge/License-Zlib-lightgrey.svg)](https://opensource.org/licenses/Zlib)",
+"[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)"    /*MIT, IBM, ISC, Zlib, Mozilla*/
 ];
 
 //////////////////////////////////////////////////////////////////
@@ -15,9 +15,8 @@ const generateTitle = (data) => {
   return `
 ## ${data.title}
 
-    ${data.name}
-
-  `;
+${data.name}
+`;
 };
 
 //////////////////////////////////////////////////////////////////
@@ -27,29 +26,29 @@ const generateBadges = (data) => {
 
   
   // Loop over the licenses selected, building the output array
-  var licenseText = [];
+  var licenseText = "";
+
   for( var i = 0; i < data.licenses.length; i++ ) {
     if( data.licenses[i] == ' MIT' ) {
-      licenseText.push( licenseBadges[0] );
+      licenseText += ( licenseBadges[0]  + "  ");
     };
     if( data.licenses[i] == ' IBM' ) {
-      licenseText.push( licenseBadges[1] );
+      licenseText += ( licenseBadges[1]  + "  ");
     };
     if( data.licenses[i] == ' ISC' ) {
-      licenseText.push( licenseBadges[2] );
+      licenseText += ( licenseBadges[2]  + "  ");
     };
     if( data.licenses[i] == ' Zlib' ) {
-      licenseText.push( licenseBadges[3] );
+      licenseText += ( licenseBadges[3]  + "  ");
     };
     if( data.licenses[i] == ' Mozilla' ) {
-      licenseText.push( licenseBadges[4] );
+      licenseText += ( licenseBadges[4] );
     };
   };
+  console.log( licenseText );
 
   return `
-    ${licenseText};
-
-  `;
+  ${licenseText}`;
 };
 
 //////////////////////////////////////////////////////////////////////
@@ -144,7 +143,7 @@ const generateLicensing = (data) => {
   };
 
   const displayLicenses = licenseText.join();
-  console.log( displayLicenses );
+  //console.log( displayLicenses );
 
   return `
 ## Licenses Used
@@ -160,8 +159,11 @@ const generateQuestions = (data) => {
   return `
 ## Application Questions
   
-    The following link will present my GitHub profile: [Profile](https://github.com/${data.gitHub})
-    For those that would prefer direct correspondence, my email address is: [email](${data.email})
+  The following link will present my GitHub profile:  
+  [GitHub Profile](https://github.com/${data.gitHub}) 
+  
+  For those that would prefer direct correspondence, my email address is:  
+  [email](${data.email})
   `;
 };
 
