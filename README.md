@@ -44,16 +44,9 @@ The deployment link to display the application is:
 
 ## Technologies Used
 
-1) The HTML framework employed is 'Bulma'.
-2) Certain fonts are displayed using 'FontAwesome'.
-3) Date and time information is acquired and manipulated via 'moment.js'.
-4) Several different public APIs are used to acquire the financial data:
-   * AlphaAdvantage.co
-   * Finnhub.io
-   * nomics.com
+1) JavaScript
+2) Node.js (including 'inquirer' and 'file system'
 
-## Application Screen Shot
+## Application Results
 
-![Stockman Image](./readme.jpg)
-![Stockman Image](./stockman2.jpg)
-![Stockman Image](./stockman3.jpg)
+The generated 'readme.md' file and a usage video can be found in the '/dist' subdirectory.
