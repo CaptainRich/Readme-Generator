@@ -34,19 +34,17 @@ The deployment link to display the application is:
 
 ## Application Logic
 
-1) On start-up, local storage is read and if data is acquired, the equity and crypto-currency pages are populated.
-2) On the main page the user can define, edit, or delete investments (equities or crypto-currencies).
-3) A timer is started that updated the investment information every 10 minutes.  (Only the transitory data is updated by this process.  Other data is only updated once a day after the market closes - this data is not updated by the timer function.)
-4) Whenever data is updated, the entire set of investment information is saved to local storage.
-5) When the user clicks on an investment, the appropriate page (either equity or crypto-currency) is displayed with the data for that investment.
-6) On either the equity page or the crypto-currency page, a drop list is available to switch to other (similar) investments. Whenever an investment is selected, its data is updated and displayed on the page.
-7) For each investment, its characteristic parameters are compared to a user defined range.  The HTML page is updated to indicate if the parameters are inside or outside of these defined ranges (by placing icons next to the parameters).  A parameter outside of the specified range deserves additional evaluation on a brokerage website. 
+1) On start-up, the user is presented with a series of prompts related to the generation of a 'readme.md' file.  The prompts are displayed and the user's answers saved using the node.js module 'inquirer'.
+2) After all of the prompts have been answered, the node.js module 'file system' is used to write the information to the 'readme.md' file. 
 
 ## Technologies Used
 
 1) JavaScript
-2) Node.js (including 'inquirer' and 'file system'
+2) Node.js (including 'inquirer' and 'file system')
+3) The ISC license is used for this application: [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 
 ## Application Results
 
-The generated 'readme.md' file and a usage video can be found in the '/dist' subdirectory.
+The generated 'readme.md' file and a usage video can be found in the '/dist' subdirectory.  A typical use of the application is shown in the screen capture below.
+
+![Screen Capture](./screen-capture.jpg)

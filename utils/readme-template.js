@@ -45,7 +45,7 @@ const generateBadges = (data) => {
       licenseText += ( licenseBadges[4] );
     };
   };
-  console.log( licenseText );
+  //console.log( licenseText );
 
   return `
   ${licenseText}`;

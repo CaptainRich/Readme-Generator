@@ -24,7 +24,7 @@ Richard Ay, September 2020
     
 ## Installation Instructions
     
-    Make sure 'node.js' is installed on your computer. 
+     Make sure 'node.js' is installed on your computer. 
   
     
 ## Usage Instructions
